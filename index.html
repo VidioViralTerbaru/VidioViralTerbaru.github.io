@@ -1,0 +1,95 @@
+<style>
+/* Fullscreen Portrait */
+#videoContainer {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Video full portrait */
+#myVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Popup */
+#agePopup {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  padding: 25px;
+  border-radius: 12px;
+  width: 85%;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn .3s;
+}
+
+#agePopup h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+#agePopup button {
+  padding: 12px 25px;
+  margin: 6px;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#batalBtn { background: #ff4444; color: #fff; }
+#lanjutBtn { background: #00c851; color: #fff; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+
+<div id="videoContainer">
+  <video id="myVideo" width="100%" autoplay playsinline controls>
+    <source src="https://ik.imagekit.io/aemkj1xtl/c7708a1c8df73f8dbdcd0bcf18582c9f_720w.mp4" type="video/mp4">
+  </video>
+
+  <!-- Popup 18+ -->
+  <div id="agePopup">
+    <h1>Konfirmasi Usia Anda</h1>
+    <h4>Apakah Anda 18+ ?</h4>
+    <button id="batalBtn">Batal</button>
+    <button id="lanjutBtn">Lanjut</button>
+  </div>
+</div>
+
+<script>
+let popup = document.getElementById("agePopup");
+let video = document.getElementById("myVideo");
+
+// Pause video dan tampilkan popup
+function showPopup() {
+  video.pause();
+  popup.style.display = "block";
+}
+
+// Setiap 5 detik munculkan popup
+let interval = setInterval(showPopup, 5000);
+
+// Tombol Batal
+document.getElementById("batalBtn").onclick = function() {
+  popup.style.display = "none";
+  video.play();
+};
+
+// Tombol Lanjut → redirect
+document.getElementById("lanjutBtn").onclick = function() {
+  window.location.href = "https://www.effectivegatecpm.com/hp61zvh40?key=50e1dcc0c60f03789213492a442c476d";
+};
+</script>
