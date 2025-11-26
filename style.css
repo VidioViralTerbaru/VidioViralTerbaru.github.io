@@ -1,0 +1,56 @@
+<style>
+/* Fullscreen Portrait */
+#videoContainer {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Video full portrait */
+#myVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Popup */
+#agePopup {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  padding: 25px;
+  border-radius: 12px;
+  width: 85%;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn .3s;
+}
+
+#agePopup h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+#agePopup button {
+  padding: 12px 25px;
+  margin: 6px;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#batalBtn { background: #ff4444; color: #fff; }
+#lanjutBtn { background: #00c851; color: #fff; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
